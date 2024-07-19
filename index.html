@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Citas - Alexandra Pink</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #35424a;
+            color: #ffffff;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav ul {
+            padding: 0;
+            list-style-type: none;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        section {
+            background-color: #ffffff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #35424a;
+        }
+        form {
+            display: grid;
+            gap: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #35424a;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #35424a;
+            color: #ffffff;
+        }
+        footer {
+            background-color: #35424a;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Alexandra Pink</h1>
+        <nav>
+            <ul>
+                <li><a href="#nueva-cita">Nueva Cita</a></li>
+                <li><a href="#citas">Ver Citas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="nueva-cita">
+            <h2>Agendar Nueva Cita</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
+
+                <label for="servicio">Servicio:</label>
+                <select id="servicio" name="servicio">
+                    <option value="corte">Corte de pelo</option>
+                    <option value="tinte">Tinte</option>
+                    <option value="manicura">Manicura</option>
+                    <option value="pedicura">Pedicura</option>
+                </select>
+
+                <button type="submit">Agendar Cita</button>
+            </form>
+        </section>
+
+        <section id="citas">
+            <h2>Citas Agendadas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Servicio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se agregarían las filas de citas dinámicamente con JavaScript -->
+                    <tr>
+                        <td>Ana García</td>
+                        <td>2024-07-20</td>
+                        <td>14:30</td>
+                        <td>Corte de pelo</td>
+                        <td><button>Editar</button> <button>Eliminar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Carlos Pérez</td>
+                        <td>2024-07-21</td>
+                        <td>10:00</td>
+                        <td>Tinte</td>
+                        <td><button>Editar</button> <button>Eliminar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 nestech. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
